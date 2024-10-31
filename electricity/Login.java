@@ -7,6 +7,8 @@ import java.sql.*;
 public class Login extends JFrame implements ActionListener{
 
     JButton login, cancel, signup;
+  
+    
     JTextField username, password;
     Choice logginin;
     Login() {
@@ -40,24 +42,25 @@ public class Login extends JFrame implements ActionListener{
         logginin.setBounds(400, 100, 150, 20);
         add(logginin);
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/login.png"));
-        Image i2 = i1.getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT);
-        login = new JButton("Login", new ImageIcon(i2));
-        login.setBounds(330, 160, 100, 20);
+        login = new JButton("Login");
+        login.setBounds(330, 160, 150, 40);
+        login.setBackground(Color.green);
         login.addActionListener(this);
         add(login);
         
-        ImageIcon i3 = new ImageIcon(ClassLoader.getSystemResource("icon/cancel.jpg"));
-        Image i4 = i3.getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT);
-        cancel = new JButton("Cancel", new ImageIcon(i4));
-        cancel.setBounds(450, 160, 100, 20);
+        cancel = new JButton("Cancel");
+        cancel.setBounds(550, 160, 200, 40);
+        cancel.setBackground(Color.red);
         cancel.addActionListener(this);
         add(cancel);
+         JLabel account = new JLabel("if there is no account");
+        account.setBounds(300, 220, 170, 40);
+        add(account);
         
-        ImageIcon i5 = new ImageIcon(ClassLoader.getSystemResource("icon/signup.png"));
-        Image i6 = i5.getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT);
-        signup = new JButton("Signup", new ImageIcon(i6));
-        signup.setBounds(380, 200, 100, 20);
+        signup = new JButton("Signup");
+        signup.setBounds(450, 220, 150, 40);
+        signup.setBackground(Color.CYAN);
+    
         signup.addActionListener(this);
         add(signup);
         
@@ -68,7 +71,7 @@ public class Login extends JFrame implements ActionListener{
         image.setBounds(0, 0, 250, 250);
         add(image);
         
-        setSize(640, 300);
+        setSize(900, 600);
         setLocation(400, 200);
         setVisible(true);
     }
