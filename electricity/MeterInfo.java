@@ -20,7 +20,7 @@ public class MeterInfo extends JFrame implements ActionListener{
         
         JPanel p = new JPanel();
         p.setLayout(null);
-        p.setBackground(new Color(173, 216, 230));
+        p.setBackground(Color.CYAN);
         add(p);
         
         JLabel heading = new JLabel("Meter Information");
@@ -118,7 +118,7 @@ public class MeterInfo extends JFrame implements ActionListener{
         JLabel image = new JLabel(i3);
         add(image, "West");
         
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(Color.blue);
         
         setVisible(true);
     }
